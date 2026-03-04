@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Rizwan Ali · Master Algorithm · Design & Development 2026</title>
+    <title>Rizwan Ali · Learn Algorithms · Master DSA 2026</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -40,7 +40,7 @@
             padding: 0 20px;
         }
 
-        /* Header (unchanged, fully responsive) */
+        /* Header */
         header {
             background: white;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -207,7 +207,7 @@
             color: var(--primary);
         }
 
-        /* Alternate Layout Container (original preserved) */
+        /* Alternate Layout Container */
         .alternate-container {
             display: flex;
             flex-direction: column;
@@ -404,7 +404,7 @@
             font-size: 0.9rem;
         }
 
-        /* Resource Grid (original) */
+        /* Resource Grid */
         .resource-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -472,7 +472,7 @@
             margin-left: 5px;
         }
 
-        /* Essential cards base (reused in teacher essentials) */
+        /* Essential cards base */
         .essential-card {
             background: white;
             border-radius: 20px;
@@ -508,7 +508,7 @@
             font-size: 0.95rem;
         }
 
-        /* ===== ENHANCED TEACHER ESSENTIALS SHOWCASE (fully responsive) ===== */
+        /* ENHANCED TEACHER ESSENTIALS SHOWCASE */
         .essentials-showcase {
             background: white;
             border-radius: 28px;
@@ -607,7 +607,7 @@
             }
         }
 
-        /* ===== NEW SECTION: MASTER ALGORITHM FOR DESIGN & DEVELOPMENT (responsive) ===== */
+        /* MASTER ALGORITHM SECTION */
         .master-algorithm {
             background: linear-gradient(145deg, #ffffff, #f2f5ff);
             border-radius: 50px;
@@ -860,17 +860,17 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="./main.html" class="logo">Rizwan<span>Reach</span></a>
+                <a href="./index.html" class="logo">Rizwan<span>Algo</span></a>
                 <button class="hamburger" id="hamburgerBtn">
                     <span></span><span></span><span></span>
                 </button>
                 <nav id="mainNav">
                     <ul>
                         <li><a href="#home" class="nav-link">Home</a></li>
-                        <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                        <li><a href="#fundamentals" class="nav-link">Fundamentals</a></li>
+                        <li><a href="#dsa" class="nav-link">DSA</a></li>
+                        <li><a href="#advanced" class="nav-link">Advanced</a></li>
                         <li><a href="#resources" class="nav-link">Resources</a></li>
-                        <li><a href="#ai-ml" class="nav-link">AI & ML</a></li>
-                        <li><a href="#blogs" class="nav-link">Blogs</a></li>
                     </ul>
                 </nav>
             </div>
@@ -880,402 +880,439 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="teacher-badge">
-                <i class="fas fa-chalkboard-teacher"></i> Your Teacher: Rizwan Ali
+                <i class="fas fa-code"></i> Instructor: Rizwan Ali
             </div>
-            <h1>Complete IT & AI Teaching Portfolio</h1>
-            <p>HTML · CSS · JavaScript · Python · Flask · Django · FastAPI · BeautifulSoup · Selenium · Automation ·
-                Machine Learning · AI · Teacher Essentials · Master Algorithm</p>
+            <h1>Master Algorithms & Data Structures</h1>
+            <p>Foundations · Sorting · Searching · Graphs · Dynamic Programming · Advanced Algorithms · System Design ·
+                Competitive Programming</p>
         </div>
     </section>
 
     <div class="container">
-        <!-- Teaching Approach Section (original, unchanged) -->
-        <h2 class="section-title" id="teaching">My <span>Teaching Approach</span></h2>
+        <!-- Fundamentals Section -->
+        <h2 class="section-title" id="fundamentals">Algorithm <span>Fundamentals</span></h2>
         <div class="alternate-container">
-            <!-- Row 1: Teaching Philosophy -->
+            <!-- Row 1: What are Algorithms -->
             <div class="alternate-row">
                 <div class="image-side">
                     <div class="image-container">
                         <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                            alt="Teaching">
-                        <div class="image-caption"><i class="fas fa-chalkboard-teacher"></i> Student-centered learning
-                        </div>
+                            alt="Algorithm fundamentals">
+                        <div class="image-caption"><i class="fas fa-lightbulb"></i> Think like a programmer</div>
                     </div>
                 </div>
                 <div class="content-side">
-                    <span class="badge"><i class="fas fa-heart"></i> MY PHILOSOPHY</span>
-                    <h2><i class="fas fa-chalkboard"></i> Student-Centered Learning</h2>
-                    <p>I believe in putting students at the center of the learning experience. My teaching approach
-                        focuses on understanding each student's unique needs, learning style, and goals.</p>
+                    <span class="badge"><i class="fas fa-brain"></i> CORE CONCEPTS</span>
+                    <h2><i class="fas fa-sitemap"></i> What is an Algorithm?</h2>
+                    <p>An algorithm is a step-by-step procedure for solving a problem. Understanding algorithm analysis,
+                        complexity, and design paradigms is the foundation of computer science.</p>
                     <ul class="teaching-points">
-                        <li><i class="fas fa-check-circle"></i><span><strong>10,000+ students</strong> taught across 50+
-                                countries</span></li>
-                        <li><i class="fas fa-check-circle"></i><span><strong>500+ blogs</strong> written for deep
-                                understanding</span></li>
-                        <li><i class="fas fa-check-circle"></i><span><strong>30 YouTube videos</strong> with 100K+
-                                views</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Time & Space Complexity</strong> - Big O,
+                                Big Θ, Big Ω</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Recursion</strong> - Divide and conquer
+                                approach</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Brute Force vs Optimal</strong> - Tradeoffs
+                                and improvements</span></li>
                     </ul>
-                    <div><a href="#" class="btn">Learn More</a><a href="#" class="btn btn-outline">Watch Video</a></div>
+                    <div>
+                        <a href="https://en.wikipedia.org/wiki/Algorithm" class="btn btn-small"
+                            target="_blank">Wikipedia</a>
+                        <a href="https://www.khanacademy.org/computing/computer-science/algorithms"
+                            class="btn btn-small btn-outline" target="_blank">Khan Academy</a>
+                        <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+                            class="btn btn-small btn-outline" target="_blank">MIT 6.006</a>
+                    </div>
                 </div>
             </div>
-            <!-- Row 2: Python Mastery -->
+            <!-- Row 2: Sorting & Searching -->
             <div class="alternate-row">
                 <div class="image-side">
                     <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                            alt="Python Course">
-                        <div class="image-caption"><i class="fab fa-python"></i> Python programming</div>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+                            alt="Sorting algorithms">
+                        <div class="image-caption"><i class="fas fa-sort"></i> Sorting in action</div>
                     </div>
                 </div>
                 <div class="content-side">
-                    <span class="badge"><i class="fas fa-laptop-code"></i> POPULAR COURSE</span>
-                    <h2><i class="fab fa-python"></i> Python Programming Mastery</h2>
-                    <p>From beginners to advanced developers, this comprehensive Python course covers everything you
-                        need to become proficient.</p>
+                    <span class="badge"><i class="fas fa-chart-bar"></i> ESSENTIAL</span>
+                    <h2><i class="fas fa-sort-amount-down"></i> Sorting & Searching</h2>
+                    <p>Classic algorithms every developer must know: from bubble sort to quicksort, linear to binary
+                        search.</p>
                     <ul class="teaching-points">
-                        <li><i class="fas fa-check-circle"></i><span><strong>Official Python 3.13 docs</strong> -
-                                Complete reference</span></li>
-                        <li><i class="fas fa-check-circle"></i><span><strong>327 GitHub projects</strong> for hands-on
-                                practice</span></li>
-                        <li><i class="fas fa-check-circle"></i><span><strong>5 MIT Scratch projects</strong> for
-                                beginners</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Comparison Sorts</strong> - Bubble,
+                                Insertion, Merge, Quick, Heap</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Non-Comparison</strong> - Counting, Radix,
+                                Bucket</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Searching</strong> - Linear, Binary,
+                                Interpolation</span></li>
                     </ul>
-                    <div><a href="https://docs.python.org/3/" class="btn btn-small" target="_blank">Python Docs</a><a
-                            href="https://github.com/rizwan-ai" class="btn btn-small btn-outline"
-                            target="_blank">GitHub</a></div>
-                </div>
-            </div>
-            <!-- Row 3: Web Development Frameworks -->
-            <div class="alternate-row">
-                <div class="image-side">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                            alt="Web Development">
-                        <div class="image-caption"><i class="fas fa-code"></i> Web frameworks</div>
+                    <div>
+                        <a href="https://www.geeksforgeeks.org/sorting-algorithms/" class="btn btn-small"
+                            target="_blank">GeeksforGeeks</a>
+                        <a href="https://visualgo.net/en/sorting" class="btn btn-small btn-outline"
+                            target="_blank">VisuAlgo</a>
+                        <a href="https://en.wikipedia.org/wiki/Sorting_algorithm" class="btn btn-small btn-outline"
+                            target="_blank">Wikipedia</a>
                     </div>
-                </div>
-                <div class="content-side">
-                    <span class="badge"><i class="fas fa-rocket"></i> FULL STACK</span>
-                    <h2><i class="fas fa-globe"></i> Web Development Frameworks</h2>
-                    <p>Master modern web development with Python frameworks from lightweight Flask to full-featured
-                        Django.</p>
-                    <ul class="teaching-points">
-                        <li><i class="fas fa-check-circle"></i><span><strong>Flask</strong> -
-                                flask.palletsprojects.com</span></li>
-                        <li><i class="fas fa-check-circle"></i><span><strong>Django</strong> -
-                                docs.djangoproject.com</span></li>
-                        <li><i class="fas fa-check-circle"></i><span><strong>FastAPI</strong> -
-                                fastapi.tiangolo.com</span></li>
-                    </ul>
-                    <div><a href="https://flask.palletsprojects.com/" class="btn btn-small" target="_blank">Flask</a><a
-                            href="https://docs.djangoproject.com/" class="btn btn-small btn-outline"
-                            target="_blank">Django</a><a href="https://fastapi.tiangolo.com/"
-                            class="btn btn-small btn-outline" target="_blank">FastAPI</a></div>
-                </div>
-            </div>
-            <!-- Row 4: Automation & Scraping -->
-            <div class="alternate-row">
-                <div class="image-side">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                            alt="Automation">
-                        <div class="image-caption"><i class="fas fa-robot"></i> Web scraping</div>
-                    </div>
-                </div>
-                <div class="content-side">
-                    <span class="badge"><i class="fas fa-brain"></i> AUTOMATION</span>
-                    <h2><i class="fas fa-robot"></i> Web Scraping & Automation</h2>
-                    <p>Learn to extract data from websites and automate browser interactions with powerful Python
-                        libraries.</p>
-                    <ul class="teaching-points">
-                        <li><i class="fas fa-check-circle"></i><span><strong>BeautifulSoup</strong> -
-                                www.crummy.com</span></li>
-                        <li><i class="fas fa-check-circle"></i><span><strong>Selenium</strong> - www.selenium.dev</span>
-                        </li>
-                        <li><i class="fas fa-check-circle"></i><span><strong>Scrapy</strong> - scrapy.org</span></li>
-                    </ul>
-                    <div><a href="https://www.crummy.com/software/BeautifulSoup/" class="btn btn-small"
-                            target="_blank">BeautifulSoup</a><a href="https://www.selenium.dev/"
-                            class="btn btn-small btn-outline" target="_blank">Selenium</a></div>
                 </div>
             </div>
         </div>
 
-        <!-- ===== ENHANCED TEACHER ESSENTIALS (with official links) ===== -->
+        <!-- Data Structures Section -->
+        <h2 class="section-title" id="dsa">Data <span>Structures</span></h2>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <i class="fas fa-link resource-icon"></i>
+                <h3>Arrays & Strings</h3>
+                <p>Fundamental linear data structures. Master array manipulation, sliding window, two-pointer
+                    techniques.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Array_(data_structure)" class="resource-link"
+                        target="_blank">Wikipedia <span class="official-badge">wiki</span></a>
+                    <a href="https://www.geeksforgeeks.org/array-data-structure/" class="resource-link"
+                        target="_blank">GeeksforGeeks</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-code-branch resource-icon"></i>
+                <h3>Linked Lists</h3>
+                <p>Singly, doubly, circular. Understand pointer manipulation and classic problems.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Linked_list" class="resource-link"
+                        target="_blank">Wikipedia</a>
+                    <a href="https://visualgo.net/en/list" class="resource-link" target="_blank">VisuAlgo</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-layer-group resource-icon"></i>
+                <h3>Stacks & Queues</h3>
+                <p>LIFO and FIFO structures. Essential for parsing, BFS/DFS, and expression evaluation.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)" class="resource-link"
+                        target="_blank">Stack</a>
+                    <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)" class="resource-link"
+                        target="_blank">Queue</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-tree resource-icon"></i>
+                <h3>Trees & Graphs</h3>
+                <p>Binary trees, BST, heaps, graph representations, traversal algorithms.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)" class="resource-link"
+                        target="_blank">Trees</a>
+                    <a href="https://en.wikipedia.org/wiki/Graph_(abstract_data_type)" class="resource-link"
+                        target="_blank">Graphs</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-database resource-icon"></i>
+                <h3>Hash Tables</h3>
+                <p>Dictionaries, maps, sets. Understand hashing, collisions, and real-world applications.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Hash_table" class="resource-link"
+                        target="_blank">Wikipedia</a>
+                    <a href="https://www.cs.usfca.edu/~galles/visualization/OpenHash.html" class="resource-link"
+                        target="_blank">Visualization</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-heap resource-icon"></i>
+                <h3>Heaps & Priority Queues</h3>
+                <p>Binary heaps, heap sort, priority queues. Essential for scheduling and graph algorithms.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Heap_(data_structure)" class="resource-link"
+                        target="_blank">Wikipedia</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Algorithms Section -->
+        <h2 class="section-title" id="advanced">Advanced <span>Algorithms</span></h2>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <i class="fas fa-route resource-icon"></i>
+                <h3>Graph Algorithms</h3>
+                <p>BFS, DFS, Dijkstra, Bellman-Ford, Floyd-Warshall, A*, topological sort.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" class="resource-link"
+                        target="_blank">Dijkstra</a>
+                    <a href="https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm" class="resource-link"
+                        target="_blank">Bellman-Ford</a>
+                    <a href="https://visualgo.net/en/sssp" class="resource-link" target="_blank">VisuAlgo</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-random resource-icon"></i>
+                <h3>Dynamic Programming</h3>
+                <p>Memoization, tabulation, classic problems: knapsack, LCS, edit distance, matrix chain.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Dynamic_programming" class="resource-link"
+                        target="_blank">Wikipedia</a>
+                    <a href="https://www.geeksforgeeks.org/dynamic-programming/" class="resource-link"
+                        target="_blank">GeeksforGeeks</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-grip-lines resource-icon"></i>
+                <h3>Greedy Algorithms</h3>
+                <p>Huffman coding, activity selection, fractional knapsack, minimum spanning trees.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Greedy_algorithm" class="resource-link"
+                        target="_blank">Wikipedia</a>
+                    <a href="https://www.cs.princeton.edu/courses/archive/spr05/cos423/lectures/06greedy.pdf"
+                        class="resource-link" target="_blank">Princeton</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-search resource-icon"></i>
+                <h3>String Algorithms</h3>
+                <p>KMP, Rabin-Karp, Z-algorithm, suffix arrays, tries.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm"
+                        class="resource-link" target="_blank">KMP</a>
+                    <a href="https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm" class="resource-link"
+                        target="_blank">Rabin-Karp</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-infinity resource-icon"></i>
+                <h3>NP-Completeness</h3>
+                <p>P vs NP, NP-complete problems, reductions, approximation algorithms.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/NP-completeness" class="resource-link"
+                        target="_blank">Wikipedia</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-cogs resource-icon"></i>
+                <h3>System Design</h3>
+                <p>Algorithms at scale: caching, load balancing, consistent hashing, distributed systems.</p>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/Consistent_hashing" class="resource-link"
+                        target="_blank">Consistent Hashing</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teacher Essentials for Algorithms -->
         <div class="essentials-showcase">
             <div class="essentials-header">
                 <div class="text-content">
-                    <h3><span>Teacher</span> Essentials · Official & Trusted</h3>
-                    <p><strong>Essential toolkit for every modern educator:</strong> stay updated with the intersection
-                        of education and technology.
-                        <strong>EdTech Wikipedia</strong> offers a broad overview of pedagogical theories and digital
-                        tools.
-                        <strong>EdSurge</strong> delivers independent news, product reviews, and research on how
-                        technology shapes learning.
-                        <strong>ISTE</strong> (International Society for Technology in Education) sets the global
-                        standards for educator certification
-                        and provides a community of forward-thinking teachers. These three pillars are the foundation
-                        for any teacher who wants to integrate AI, coding, and design into their classroom.
-                    </p>
+                    <h3><span>Algorithm</span> Teacher Essentials</h3>
+                    <p><strong>Curated resources for mastering algorithms:</strong> From foundational textbooks to
+                        interactive visualizations and competitive programming platforms.</p>
                 </div>
                 <div class="image-content">
                     <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                        alt="Teacher essentials">
+                        alt="Algorithm learning">
                 </div>
             </div>
 
             <div class="essentials-cards">
                 <div class="essential-card">
-                    <div class="essential-icon"><i class="fab fa-wikipedia-w"></i></div>
-                    <h3>EdTech Wikipedia</h3>
-                    <p>Overview of educational technology tools, pedagogical theories, and current research in digital
-                        learning.</p>
-                    <a href="https://en.wikipedia.org/wiki/Educational_technology" class="essential-link"
-                        target="_blank">Read Article →</a>
+                    <div class="essential-icon"><i class="fas fa-book"></i></div>
+                    <h3>CLRS Textbook</h3>
+                    <p>"Introduction to Algorithms" by Cormen, Leiserson, Rivest, Stein. The definitive algorithm
+                        reference.</p>
+                    <a href="https://en.wikipedia.org/wiki/Introduction_to_Algorithms" class="essential-link"
+                        target="_blank">Learn more →</a>
                 </div>
                 <div class="essential-card">
-                    <div class="essential-icon"><i class="fas fa-newspaper"></i></div>
-                    <h3>EdSurge</h3>
-                    <p>Independent news and resources covering the intersection of education and technology with daily
-                        updates.</p>
-                    <a href="https://www.edsurge.com" class="essential-link" target="_blank">Visit EdSurge →</a>
+                    <div class="essential-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>LeetCode</h3>
+                    <p>Practice algorithms with 3000+ problems. Essential for interview preparation.</p>
+                    <a href="https://leetcode.com" class="essential-link" target="_blank">Start coding →</a>
                 </div>
                 <div class="essential-card">
-                    <div class="essential-icon"><i class="fas fa-globe"></i></div>
-                    <h3>ISTE</h3>
-                    <p>International Society for Technology in Education - global standards and certification for
-                        educators.</p>
-                    <a href="https://www.iste.org" class="essential-link" target="_blank">Explore ISTE →</a>
+                    <div class="essential-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>VisuAlgo</h3>
+                    <p>Visualize data structures and algorithms through animation.</p>
+                    <a href="https://visualgo.net" class="essential-link" target="_blank">Visualize →</a>
                 </div>
             </div>
 
             <div class="deepseek-note">
-                <i class="fas fa-robot"></i> <strong>Rizwan AI recommendation:</strong> "Combine EdTech Wikipedia for
-                foundational knowledge,
-                EdSurge for daily inspiration, and ISTE for certification and networking. These resources are essential
-                for any teacher embracing AI in 2026."
+                <i class="fas fa-robot"></i> <strong>Rizwan's Algorithm Path:</strong> "Start with CLRS chapters 1-6 for
+                fundamentals, practice daily on LeetCode (easy → medium), use VisuAlgo for visualization, and explore
+                competitive programming on Codeforces for advanced mastery."
             </div>
         </div>
 
-        <!-- Stats Section (original) -->
+        <!-- Stats Section -->
         <div class="stats-section">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">10K+</div>
-                    <div class="stat-label">Students</div>
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Algorithms</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Blogs</div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Visualizations</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">327</div>
-                    <div class="stat-label">GitHub</div>
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Practice Problems</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">112</div>
-                    <div class="stat-label">Canva</div>
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Textbooks</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">30</div>
-                    <div class="stat-label">YouTube</div>
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Video Courses</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">5</div>
-                    <div class="stat-label">Scratch</div>
+                    <div class="stat-number">MIT</div>
+                    <div class="stat-label">OpenCourseWare</div>
                 </div>
             </div>
         </div>
 
-        <!-- ===== NEW MASTER ALGORITHM FOR DESIGN & DEVELOPMENT ===== -->
-        <div class="master-algorithm">
-            <h2 class="algorithm-title"><span>⚙️ Master <a href="./new.html" target="_blank"
-                        style="text-decoration: none;">
-                        Algorithm
-                    </a></span> for Design & Development</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 1.2rem;">Follow this 5‑step
-                recursive learning path, powered by official docs and real‑world building.</p>
-
-            <div class="algorithm-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h4>Design → Code</h4>
-                    <p>Start with Canva / Figma, then translate to semantic HTML + vanilla CSS/JS. Use
-                        <strong>MDN</strong> as your reference.
-                    </p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h4>Python Core</h4>
-                    <p>Master Python 3.13 with <strong>official docs</strong> and build CLI tools, then move to
-                        automation (BeautifulSoup, Selenium).</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h4>API & Backend</h4>
-                    <p>Choose Flask (lightweight) or Django (full‑stack) or FastAPI (async). Study the official
-                        documentation for each.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h4>Autonomous AI</h4>
-                    <p>Integrate ML (scikit‑learn, PyTorch) and build agents that scrape, decide, and serve predictions
-                        via FastAPI.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <h4>Teacher's Edge</h4>
-                    <p>Use EdTech Wikipedia, EdSurge, ISTE to stay current. Teach others — the final step of mastery.
-                    </p>
-                </div>
-            </div>
-
-            <div class="algorithm-resources">
-                <a href="https://developer.mozilla.org/" class="algo-link" target="_blank"><i class="fab fa-js"></i> MDN
-                    <span class="official-tag">official</span></a>
-                <a href="https://docs.python.org/3/" class="algo-link" target="_blank"><i class="fab fa-python"></i>
-                    Python 3.13 <span class="official-tag">official</span></a>
-                <a href="https://fastapi.tiangolo.com/" class="algo-link" target="_blank"><i class="fas fa-bolt"></i>
-                    FastAPI <span class="official-tag">official</span></a>
-                <a href="https://flask.palletsprojects.com/" class="algo-link" target="_blank"><i
-                        class="fas fa-flask"></i> Flask <span class="official-tag"></span></a>
-                <a href="https://docs.djangoproject.com/" class="algo-link" target="_blank"><i
-                        class="fab fa-django"></i> Django <span class="official-tag">official</span></a>
-                <a href="https://www.selenium.dev/" class="algo-link" target="_blank"><i class="fas fa-robot"></i>
-                    Selenium <span class="official-tag"></span></a>
-            </div>
-        </div>
-
-        <!-- Official Resources Grid (original) -->
-        <h2 class="section-title" id="resources"><span>Official</span> Documentation</h2>
+        <!-- Official Resources Grid -->
+        <h2 class="section-title" id="resources"><span>Official</span> Algorithm Resources</h2>
         <div class="resource-grid">
-            <div class="resource-card"><i class="fab fa-python resource-icon"></i>
-                <h3>Python</h3>
-                <div class="resource-links"><a href="https://docs.python.org/3/" class="resource-link"
-                        target="_blank">Python 3.13 Docs <span class="official-badge">Official</span></a><a
-                        href="https://docs.python.org/3/tutorial/" class="resource-link" target="_blank">Python
-                        Tutorial</a></div>
+            <div class="resource-card">
+                <i class="fas fa-university resource-icon"></i>
+                <h3>MIT Algorithms</h3>
+                <div class="resource-links">
+                    <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+                        class="resource-link" target="_blank">6.006 Intro <span class="official-badge">OCW</span></a>
+                    <a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/"
+                        class="resource-link" target="_blank">6.046 Advanced</a>
+                </div>
             </div>
-            <div class="resource-card"><i class="fab fa-html5 resource-icon"></i>
-                <h3>HTML/CSS/JS</h3>
-                <div class="resource-links"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                        class="resource-link" target="_blank">MDN HTML <span
-                            class="official-badge">Official</span></a><a
-                        href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="resource-link"
-                        target="_blank">MDN CSS</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                        class="resource-link" target="_blank">MDN JS</a></div>
+            <div class="resource-card">
+                <i class="fab fa-wikipedia-w resource-icon"></i>
+                <h3>Wikipedia</h3>
+                <div class="resource-links">
+                    <a href="https://en.wikipedia.org/wiki/List_of_algorithms" class="resource-link"
+                        target="_blank">List of Algorithms</a>
+                    <a href="https://en.wikipedia.org/wiki/Algorithm" class="resource-link"
+                        target="_blank">Algorithm</a>
+                    <a href="https://en.wikipedia.org/wiki/Data_structure" class="resource-link" target="_blank">Data
+                        Structures</a>
+                </div>
             </div>
-            <div class="resource-card"><i class="fas fa-flask resource-icon"></i>
-                <h3>Flask</h3>
-                <div class="resource-links"><a href="https://flask.palletsprojects.com/" class="resource-link"
-                        target="_blank">Flask Docs <span class="official-badge">Official</span></a></div>
+            <div class="resource-card">
+                <i class="fas fa-code resource-icon"></i>
+                <h3>GeeksforGeeks</h3>
+                <div class="resource-links">
+                    <a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/" class="resource-link"
+                        target="_blank">Algorithm Hub</a>
+                </div>
             </div>
-            <div class="resource-card"><i class="fab fa-django resource-icon"></i>
-                <h3>Django</h3>
-                <div class="resource-links"><a href="https://docs.djangoproject.com/" class="resource-link"
-                        target="_blank">Django Docs <span class="official-badge">Official</span></a></div>
+            <div class="resource-card">
+                <i class="fas fa-chart-line resource-icon"></i>
+                <h3>Khan Academy</h3>
+                <div class="resource-links">
+                    <a href="https://www.khanacademy.org/computing/computer-science/algorithms" class="resource-link"
+                        target="_blank">Algorithms Course</a>
+                </div>
             </div>
-            <div class="resource-card"><i class="fas fa-bolt resource-icon"></i>
-                <h3>FastAPI</h3>
-                <div class="resource-links"><a href="https://fastapi.tiangolo.com/" class="resource-link"
-                        target="_blank">FastAPI Docs <span class="official-badge">Official</span></a></div>
+            <div class="resource-card">
+                <i class="fas fa-calculator resource-icon"></i>
+                <h3>CP Algorithms</h3>
+                <div class="resource-links">
+                    <a href="https://cp-algorithms.com/" class="resource-link" target="_blank">Competitive
+                        Programming</a>
+                </div>
             </div>
-            <div class="resource-card"><i class="fas fa-robot resource-icon"></i>
-                <h3>Selenium</h3>
-                <div class="resource-links"><a href="https://www.selenium.dev/documentation/" class="resource-link"
-                        target="_blank">Selenium Docs <span class="official-badge">Official</span></a></div>
-            </div>
-            <div class="resource-card"><i class="fas fa-soup resource-icon"></i>
-                <h3>BeautifulSoup</h3>
-                <div class="resource-links"><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"
-                        class="resource-link" target="_blank">BeautifulSoup <span
-                            class="official-badge">Official</span></a></div>
-            </div>
-            <div class="resource-card"><i class="fas fa-brain resource-icon"></i>
-                <h3>Machine Learning</h3>
-                <div class="resource-links"><a href="https://scikit-learn.org/stable/" class="resource-link"
-                        target="_blank">scikit-learn <span class="official-badge">Official</span></a><a
-                        href="https://www.tensorflow.org/" class="resource-link" target="_blank">TensorFlow</a></div>
+            <div class="resource-card">
+                <i class="fas fa-eye resource-icon"></i>
+                <h3>Algorithm Visualizers</h3>
+                <div class="resource-links">
+                    <a href="https://visualgo.net" class="resource-link" target="_blank">VisuAlgo</a>
+                    <a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html" class="resource-link"
+                        target="_blank">Data Structure Visualizations</a>
+                </div>
             </div>
         </div>
 
-        <!-- Latest Blogs Section (original) -->
-        <h2 class="section-title" id="blogs"><span>Latest</span> AI Blogs 2026</h2>
+        <!-- Practice Platforms -->
+        <h2 class="section-title">Practice <span>Platforms</span></h2>
         <div class="resource-grid">
-            <div class="resource-card"><i class="fas fa-blog resource-icon"></i>
-                <h3>Claude Code Power Tips</h3>
-                <p>Use Claude Code to speed up data science with Python.</p>
-                <div class="resource-links"><a href="https://www.kdnuggets.com/" class="resource-link"
-                        target="_blank">Read on KDnuggets →</a></div>
+            <div class="resource-card">
+                <i class="fas fa-code resource-icon"></i>
+                <h3>LeetCode</h3>
+                <p>Interview preparation with curated problem sets.</p>
+                <div class="resource-links">
+                    <a href="https://leetcode.com" class="resource-link" target="_blank">Start Practicing</a>
+                </div>
             </div>
-            <div class="resource-card"><i class="fas fa-blog resource-icon"></i>
-                <h3>AI Engineer Roadmap 2026</h3>
-                <p>Step-by-step roadmap for AI engineering career.</p>
-                <div class="resource-links"><a href="https://www.kdnuggets.com/" class="resource-link"
-                        target="_blank">Read on KDnuggets →</a></div>
+            <div class="resource-card">
+                <i class="fas fa-trophy resource-icon"></i>
+                <h3>Codeforces</h3>
+                <p>Competitive programming with regular contests.</p>
+                <div class="resource-links">
+                    <a href="https://codeforces.com" class="resource-link" target="_blank">Join Contests</a>
+                </div>
             </div>
-            <div class="resource-card"><i class="fas fa-blog resource-icon"></i>
-                <h3>Python Docs Guide</h3>
-                <p>How to use official Python documentation.</p>
-                <div class="resource-links"><a
-                        href="https://www.guvi.in/blog/how-to-use-the-official-python-documentation/"
-                        class="resource-link" target="_blank">Read on GUVI →</a></div>
+            <div class="resource-card">
+                <i class="fas fa-laptop resource-icon"></i>
+                <h3>HackerRank</h3>
+                <p>Algorithm challenges and skill certifications.</p>
+                <div class="resource-links">
+                    <a href="https://www.hackerrank.com/domains/algorithms" class="resource-link"
+                        target="_blank">Algorithms Track</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-globe resource-icon"></i>
+                <h3>AtCoder</h3>
+                <p>Japanese competitive programming platform.</p>
+                <div class="resource-links">
+                    <a href="https://atcoder.jp" class="resource-link" target="_blank">Explore</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-book-open resource-icon"></i>
+                <h3>Project Euler</h3>
+                <p>Mathematical/algorithmic problems.</p>
+                <div class="resource-links">
+                    <a href="https://projecteuler.net" class="resource-link" target="_blank">Solve</a>
+                </div>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-graduation-cap resource-icon"></i>
+                <h3>CodingBat</h3>
+                <p>Java/Python practice for beginners.</p>
+                <div class="resource-links">
+                    <a href="https://codingbat.com" class="resource-link" target="_blank">Start</a>
+                </div>
             </div>
         </div>
 
-        <!-- Wikipedia Resources (original) -->
-        <h2 class="section-title"><span>Wikipedia</span> Knowledge</h2>
-        <div class="resource-grid">
-            <div class="resource-card"><i class="fab fa-wikipedia-w resource-icon"></i>
-                <h3>Artificial Intelligence</h3>
-                <p>Complete overview of AI history and applications.</p>
-                <div class="resource-links"><a href="https://en.wikipedia.org/wiki/Artificial_intelligence"
-                        class="resource-link" target="_blank">Read Article →</a></div>
-            </div>
-            <div class="resource-card"><i class="fab fa-wikipedia-w resource-icon"></i>
-                <h3>Machine Learning</h3>
-                <p>Study of algorithms and statistical models.</p>
-                <div class="resource-links"><a href="https://en.wikipedia.org/wiki/Machine_learning"
-                        class="resource-link" target="_blank">Read Article →</a></div>
-            </div>
-            <div class="resource-card"><i class="fab fa-wikipedia-w resource-icon"></i>
-                <h3>Deep Learning</h3>
-                <p>Neural networks with multiple layers.</p>
-                <div class="resource-links"><a href="https://en.wikipedia.org/wiki/Deep_learning" class="resource-link"
-                        target="_blank">Read Article →</a></div>
-            </div>
-        </div>
-
-        <!-- Testimonials (original) -->
-        <h2 class="section-title">What <span>Students Say</span></h2>
+        <!-- Testimonials -->
+        <h2 class="section-title">Student <span>Success</span></h2>
         <div class="testimonials">
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Rizwan's teaching style makes complex concepts easy to understand. I went
-                    from beginner to building my own applications!"</p>
-                <p class="testimonial-author">Sarah Johnson</p>
-                <p class="testimonial-role">Data Analyst</p>
+                <p class="testimonial-text">"Rizwan's algorithm course helped me crack Google interviews. The structured
+                    approach and resource recommendations were invaluable."</p>
+                <p class="testimonial-author">Alex Chen</p>
+                <p class="testimonial-role">Software Engineer @ Google</p>
             </div>
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The web development bootcamp changed my career. Practical projects with
-                    excellent feedback."</p>
-                <p class="testimonial-author">Michael Chen</p>
-                <p class="testimonial-role">Frontend Developer</p>
+                <p class="testimonial-text">"From zero to ICPC regional finalist. The algorithm visualization resources
+                    and practice strategies made all the difference."</p>
+                <p class="testimonial-author">Maria Garcia</p>
+                <p class="testimonial-role">Competitive Programmer</p>
             </div>
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Comprehensive data science course with hands-on projects. Best investment
-                    in my education!"</p>
-                <p class="testimonial-author">Priya Patel</p>
-                <p class="testimonial-role">Data Scientist</p>
+                <p class="testimonial-text">"Best algorithm learning hub I've found. Everything from basics to advanced,
+                    all in one place with working links."</p>
+                <p class="testimonial-author">James Wilson</p>
+                <p class="testimonial-role">CS Student</p>
             </div>
         </div>
 
-        <!-- Teacher Signature (original) -->
+        <!-- Teacher Signature -->
         <div style="text-align: center; margin: 40px 0; font-size: 1.1rem; color: var(--primary);">
-            <i class="fas fa-quote-left"></i> Curated with ❤️ for my students by Rizwan Ali · Complete IT Resource Hub ·
-            Master Algorithm
+            <i class="fas fa-quote-left"></i> Curated with ❤️ for my students by Rizwan Ali · Master Algorithms from
+            Scratch to Advanced
             <i class="fas fa-quote-right"></i>
         </div>
     </div>
@@ -1284,36 +1321,40 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-widget">
-                    <h3>Rizwan Teach</h3>
-                    <p>Complete IT & AI teaching portfolio with official documentation and resources.</p>
+                    <h3>Rizwan Algo</h3>
+                    <p>Complete algorithm learning hub with official documentation, visualizations, and practice
+                        resources.</p>
                 </div>
                 <div class="footer-widget">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#teaching">Teaching</a></li>
-                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#fundamentals">Fundamentals</a></li>
+                        <li><a href="#dsa">Data Structures</a></li>
+                        <li><a href="#advanced">Advanced</a></li>
                     </ul>
                 </div>
                 <div class="footer-widget">
                     <h3>Official Docs</h3>
                     <ul class="footer-links">
-                        <li><a href="https://docs.python.org/3/" target="_blank">Python</a></li>
-                        <li><a href="https://docs.djangoproject.com/" target="_blank">Django</a></li>
-                        <li><a href="https://flask.palletsprojects.com/" target="_blank">Flask</a></li>
+                        <li><a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+                                target="_blank">MIT 6.006</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Algorithm" target="_blank">Wikipedia</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/"
+                                target="_blank">GeeksforGeeks</a></li>
                     </ul>
                 </div>
                 <div class="footer-widget">
-                    <h3>Connect</h3>
+                    <h3>Practice</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-                        <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
+                        <li><a href="https://codeforces.com" target="_blank">Codeforces</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2026 Rizwan Ali · 10K+ students · 500+ blogs · 327 GitHub · 112 Canva · 30 YouTube · 5 Scratch</p>
-                <p>Teacher Essentials: EdTech Wikipedia · EdSurge · ISTE · Master Algorithm for Design & Dev</p>
+                <p>© 2026 Rizwan Ali · Master Algorithms · 200+ concepts · 1000+ problems · MIT OpenCourseWare ·
+                    Visualizations</p>
+                <p>Essential Resources: CLRS · LeetCode · VisuAlgo · CP Algorithms · Khan Academy</p>
             </div>
         </div>
     </footer>

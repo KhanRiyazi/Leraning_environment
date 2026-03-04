@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoLearn · full stack AI & algorithms</title>
+    <!-- Font & base styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #f8fafc;
+            color: #0b1b33;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* header / hero */
+        .hero {
+            background: linear-gradient(145deg, #0b1b33 0%, #1d3a5c 100%);
+            color: white;
+            padding: 3rem 0 2.5rem 0;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            box-shadow: 0 12px 30px rgba(0, 20, 40, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #fff, #c0e0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .sub {
+            font-size: 1.3rem;
+            font-weight: 400;
+            opacity: 0.9;
+            max-width: 800px;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.8rem 0 1rem;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(4px);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #e6f0ff;
+        }
+
+        .search-section {
+            background: white;
+            border-radius: 60px;
+            padding: 0.3rem 0.3rem 0.3rem 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 700px;
+            margin: 2rem 0 0.5rem;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-section input {
+            flex: 1;
+            border: none;
+            padding: 0.9rem 0;
+            font-size: 1rem;
+            background: transparent;
+            outline: none;
+            color: #1e293b;
+        }
+
+        .search-section input::placeholder {
+            color: #7b8ba2;
+            font-weight: 400;
+        }
+
+        .search-section button {
+            background: #2563eb;
+            border: none;
+            border-radius: 40px;
+            padding: 0.8rem 2rem;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 1rem;
+            border: 2px solid white;
+        }
+
+        .search-section button:hover {
+            background: #1d4ed8;
+        }
+
+        /* categories & card layout */
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            color: #0e2a44;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .section-title span {
+            background: #2563eb;
+            color: white;
+            font-size: 1rem;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.8rem;
+            padding: 1.6rem 1.6rem 2rem 1.6rem;
+            box-shadow: 0 12px 28px -8px rgba(0, 34, 64, 0.12);
+            transition: transform 0.25s ease, box-shadow 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 24px 38px -12px rgba(2, 55, 105, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #0b1b33;
+        }
+
+        .card .topic-tag {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: #2563eb;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .link-list {
+            list-style: none;
+            margin: 1rem 0 1.2rem;
+            flex: 1;
+        }
+
+        .link-list li {
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .link-list a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: 500;
+            border-bottom: 1px dotted transparent;
+            transition: border-color 0.15s;
+        }
+
+        .link-list a:hover {
+            border-bottom: 1px dotted #2563eb;
+        }
+
+        .resource-badge {
+            background: #e6f0ff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #1e4a8b;
+            margin-left: 0.3rem;
+            white-space: nowrap;
+        }
+
+        .footer-meta {
+            border-top: 1px solid #eef2f6;
+            padding-top: 0.8rem;
+            margin-top: 0.6rem;
+            font-size: 0.85rem;
+            color: #5f6c84;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .official-badge {
+            background: #dcfce7;
+            color: #166534;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        /* autonomous & ML extra */
+        .double-col {
+            grid-column: span 2;
+        }
+
+        @media (max-width:700px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* quick note */
+        .disclaimer {
+            background: #f0f6ff;
+            border-radius: 1.8rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid #b9d5fd;
+        }
+
+        .disclaimer p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #1e3d66;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1>⍟ AlgoLearn · from scratch</h1>
+            <div class="sub">MIT · HTML/CSS/JS · Python · FastAPI · Django · AI/ML · scraping · autonomous</div>
+            <div class="badge-container">
+                <span class="badge">📘 MIT OpenCourse</span>
+                <span class="badge">🐍 FastAPI & Flask</span>
+                <span class="badge">🤖 DeepLearning.AI</span>
+                <span class="badge">🌐 EdSurge · ISTE</span>
+                <span class="badge">⚡ Web scraping</span>
+                <span class="badge">🧠 autonomous systems</span>
+            </div>
+            <div class="search-section">
+                <input type="text" placeholder="Search algorithms, courses, docs..." id="searchInput"
+                    aria-label="Search resources">
+                <button id="searchBtn">🔍 Explore</button>
+            </div>
+            <p style="color:#b3d4ff; margin-top: 0.8rem; font-size:0.9rem;">✨ 350+ handpicked links — official docs,
+                blogs, Wikipedia, edtech hubs</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- SECTION 0 – CANVA / DESIGN (just for fun, but we add design thinking resources) -->
+        <div class="section-title">
+            🎨 design & prototyping <span>Canva · UI/UX</span>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🖌️</div>
+                <h3>Canva design school</h3>
+                <div class="topic-tag">visual learning</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://www.canva.com/learn/" target="_blank">Canva Design School</a> <span
+                            class="resource-badge">official</span></li>
+                    <li>🔗 <a href="https://www.canva.com/" target="_blank">Canva home – create</a> <span
+                            class="official-badge">tool</span></li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/Canva" target="_blank">Wikipedia: Canva</a></li>
+                    <li>🔗 <a href="https://www.iste.org/explore/artificial-intelligence" target="_blank">ISTE design &
+                            AI</a></li>
+                </ul>
+                <div class="footer-meta"><span>design thinking</span> <span>⭐ beginner friendly</span></div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🖥️</div>
+                <h3>HTML / CSS / JS (vanilla)</h3>
+                <div class="topic-tag">foundation · MIT</div>
+                <ul class="link-list">
+                    <li>🔗 <a
+                            href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/"
+                            target="_blank">MIT 6.0002 (python & algo)</a></li>
+                    <li>🔗 <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs (vanilla JS)</a> <span
+                            class="resource-badge">official</span></li>
+                    <li>🔗 <a href="https://www.w3.org/Style/CSS/" target="_blank">W3C CSS specs</a></li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JS Wikipedia</a></li>
+                </ul>
+                <div class="footer-meta"><span>#vanilla-js</span> <span>MIT opencourseware</span></div>
+            </div>
+        </div>
+
+        <!-- SECTION 1 – PYTHON, FASTAPI, FLASK, DJANGO -->
+        <div class="section-title">
+            🐍 python · api · backend <span>FastAPI · Flask · Django</span>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>FastAPI & modern APIs</h3>
+                <div class="topic-tag">async · openapi</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI official docs</a> <span
+                            class="official-badge">⭐</span></li>
+                    <li>🔗 <a href="https://github.com/tiangolo/fastapi" target="_blank">FastAPI GitHub</a></li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/FastAPI" target="_blank">Wikipedia FastAPI</a></li>
+                    <li>🔗 <a href="https://blog.jetbrains.com/pycharm/tag/fastapi/" target="_blank">JetBrains FastAPI
+                            blog</a></li>
+                </ul>
+                <div class="footer-meta"><span>official, blogs</span> <span>🚀高性能</span></div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🥨</div>
+                <h3>Flask · microframework</h3>
+                <div class="topic-tag">python · minimalist</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://flask.palletsprojects.com/" target="_blank">Flask official</a> <span
+                            class="resource-badge">docs</span></li>
+                    <li>🔗 <a href="https://github.com/pallets/flask" target="_blank">Flask GitHub</a></li>
+                    <li>🔗 <a href="https://blog.miguelgrinberg.com/" target="_blank">Miguel Grinberg's blog (Flask)</a>
+                    </li>
+                </ul>
+                <div class="footer-meta"><span>pallets project</span> <span>tutorials</span></div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎸</div>
+                <h3>Django · batteries included</h3>
+                <div class="topic-tag">MTV · orm</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://www.djangoproject.com/" target="_blank">Django official</a> <span
+                            class="official-badge">⭐</span></li>
+                    <li>🔗 <a href="https://docs.djangoproject.com/" target="_blank">Django docs</a></li>
+                    <li>🔗 <a href="https://realpython.com/tutorials/django/" target="_blank">RealPython Django</a></li>
+                </ul>
+                <div class="footer-meta"><span>django rest framework</span></div>
+            </div>
+        </div>
+
+        <!-- SECTION 2 – WEB SCRAPING (beautifulsoup, selenium) -->
+        <div class="section-title">
+            🕷️ web scraping · automation <span>BeautifulSoup · Selenium</span>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🍲</div>
+                <h3>Beautiful Soup</h3>
+                <div class="topic-tag">html/xml parsing</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">BeautifulSoup
+                            official</a></li>
+                    <li>🔗 <a href="https://pypi.org/project/beautifulsoup4/" target="_blank">PyPI · beautifulsoup4</a>
+                    </li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser)"
+                            target="_blank">Wikipedia</a></li>
+                </ul>
+                <div class="footer-meta"><span>docs, pypi</span></div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧪</div>
+                <h3>Selenium · browser automation</h3>
+                <div class="topic-tag">webdriver · scraping</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://www.selenium.dev/documentation/" target="_blank">Selenium official</a></li>
+                    <li>🔗 <a href="https://www.selenium.dev/blog/" target="_blank">Selenium blog</a></li>
+                    <li>🔗 <a href="https://pypi.org/project/selenium/" target="_blank">PyPI · selenium</a></li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/Selenium_(software)" target="_blank">Wikipedia
+                            Selenium</a></li>
+                </ul>
+                <div class="footer-meta"><span>webdriver · cloud</span></div>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>autonomous & scraping bots</h3>
+                <div class="topic-tag">crawlers · AI</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://www.edsurge.com/research/guides/artificial-intelligence"
+                            target="_blank">EdSurge · AI guides</a> <span class="resource-badge">edtech</span></li>
+                    <li>🔗 <a href="https://www.iste.org/explore/artificial-intelligence" target="_blank">ISTE AI
+                            exploration</a></li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/Autonomous_robot" target="_blank">Wiki: autonomous
+                            robot</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 3 – MACHINE LEARNING / DEEP LEARNING / AI (heavy resources) -->
+        <div class="section-title">
+            🧠 ML · DL · AI <span>fastai · pytorch · tf · blogs</span>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🤖</div>
+                <h3>DeepLearning.AI</h3>
+                <div class="topic-tag">andrew ng · courses</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://www.deeplearning.ai/" target="_blank">DeepLearning.AI official</a> <span
+                            class="official-badge">⭐</span></li>
+                    <li>🔗 <a href="https://www.coursera.org/specializations/deep-learning" target="_blank">Coursera
+                            (Ng)</a></li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/DeepLearning.AI" target="_blank">Wikipedia page</a>
+                    </li>
+                    <li>🔗 <a href="https://www.deeplearning.ai/the-batch/" target="_blank">The Batch (blog)</a></li>
+                </ul>
+                <div class="footer-meta"><span>#1 AI learning</span></div>
+            </div>
+            <div class="card">
+                <div class="card-icon">📘</div>
+                <h3>MIT open AI/ML</h3>
+                <div class="topic-tag">MIT courseware</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/"
+                            target="_blank">MIT 6.034 AI</a></li>
+                    <li>🔗 <a href="https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006/" target="_blank">MIT
+                            6.867 ML (archived)</a></li>
+                    <li>🔗 <a href="https://openlearning.mit.edu/" target="_blank">MIT Open Learning</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔥</div>
+                <h3>PyTorch · TensorFlow</h3>
+                <div class="topic-tag">frameworks</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://pytorch.org/" target="_blank">PyTorch official</a> <span
+                            class="official-badge">pytorch</span></li>
+                    <li>🔗 <a href="https://www.tensorflow.org/" target="_blank">TensorFlow official</a></li>
+                    <li>🔗 <a href="https://blog.tensorflow.org/" target="_blank">TF blog</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Hugging Face · transformers</h3>
+                <div class="topic-tag">NLP · SOTA</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://huggingface.co/" target="_blank">Hugging Face hub</a></li>
+                    <li>🔗 <a href="https://huggingface.co/blog" target="_blank">Hugging Face blog</a></li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/Hugging_Face" target="_blank">Wiki</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 4 – EDTECH & LEARNING SOURCES (edsurge, iste, wikipedia, blogs) -->
+        <div class="section-title">
+            📚 edtech & learning hubs <span>edsurge · iste · wikipedia</span>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">📰</div>
+                <h3>EdSurge</h3>
+                <div class="topic-tag">education technology</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://www.edsurge.com/" target="_blank">EdSurge home</a> <span
+                            class="resource-badge">news</span></li>
+                    <li>🔗 <a href="https://www.edsurge.com/research/guides/artificial-intelligence" target="_blank">AI
+                            in education</a></li>
+                    <li>🔗 <a href="https://www.edsurge.com/news" target="_blank">EdSurge news</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏫</div>
+                <h3>ISTE</h3>
+                <div class="topic-tag">international society</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://www.iste.org/" target="_blank">ISTE official</a> <span
+                            class="official-badge">org</span></li>
+                    <li>🔗 <a href="https://www.iste.org/standards" target="_blank">ISTE standards</a></li>
+                    <li>🔗 <a href="https://www.iste.org/explore/" target="_blank">ISTE explore (AI/ML)</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h3>Wikipedia portals</h3>
+                <div class="topic-tag">algorithms · AI</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/Algorithm" target="_blank">Algorithm (wiki)</a></li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank">Machine learning</a>
+                    </li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/Deep_learning" target="_blank">Deep learning</a></li>
+                    <li>🔗 <a href="https://en.wikipedia.org/wiki/Web_scraping" target="_blank">Web scraping</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">📝</div>
+                <h3>Blogs & additional</h3>
+                <div class="topic-tag">dev community</div>
+                <ul class="link-list">
+                    <li>🔗 <a href="https://dev.to/t/algorithm" target="_blank">DEV community #algo</a></li>
+                    <li>🔗 <a href="https://medium.com/tag/artificial-intelligence" target="_blank">Medium · AI</a></li>
+                    <li>🔗 <a href="https://towardsdatascience.com/" target="_blank">Towards Data Science</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- autonomous & deep extra -->
+        <div class="disclaimer">
+            <p>✨ <strong>autonomous systems · self-learning agents</strong> — explore <a
+                    href="https://en.wikipedia.org/wiki/Autonomous_agent" target="_blank">autonomous agent wiki</a>, <a
+                    href="https://www.deeplearning.ai/courses/" target="_blank">DeepLearning.ai courses</a>, <a
+                    href="https://www.fast.ai/" target="_blank">fast.ai</a> · all official docs & blogs collected with
+                vanilla JS logic. New resources added daily via community.</p>
+            <p style="margin-top:1rem;">🔎 use the search above to filter concepts — powered by vanilla JavaScript</p>
+        </div>
+    </main>
+
+    <footer style="background:#e9f0fa; padding:2rem 0; margin-top:2rem; border-top:2px solid white;">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+            <span>🧪 AlgoLearn 2025 · MIT scratch to AI</span>
+            <span>📬 <a href="#" style="text-decoration:none;">submit a resource</a> | vanilla JS, no frameworks</span>
+        </div>
+    </footer>
+
+    <!-- vanilla JS: interactive search filter (autonomous filter) -->
+    <script>
+        (function () {
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            const cards = document.querySelectorAll('.card');
+            const sections = document.querySelectorAll('.section-title');
+
+            function filterCards(term) {
+                const lowered = term.toLowerCase().trim();
+                cards.forEach(card => {
+                    const cardText = card.innerText.toLowerCase();
+                    if (cardText.includes(lowered) || lowered === '') {
+                        card.style.display = 'flex';   // originally flex from card class
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // optional: hide empty section titles (just a detail)
+                sections.forEach(title => {
+                    let next = title.nextElementSibling; // should be grid
+                    if (next && next.classList.contains('grid')) {
+                        const visibleCards = Array.from(next.querySelectorAll('.card')).some(c => c.style.display !== 'none');
+                        if (!visibleCards && lowered !== '') {
+                            title.style.opacity = '0.4';
+                        } else {
+                            title.style.opacity = '1';
+                        }
+                    }
+                });
+            }
+
+            function performSearch() {
+                const query = searchInput.value;
+                filterCards(query);
+            }
+
+            searchBtn.addEventListener('click', performSearch);
+            searchInput.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') performSearch();
+            });
+
+            // initial reset (show all)
+            filterCards('');
+
+            // quick demo: simulate autonomous welcome
+            console.log('✨ AlgoLearn: autonomous learning resources ready');
+        })();
+    </script>
+    <!-- include any official links manually ensured (all links open safe) -->
+</body>
+
+</html>
