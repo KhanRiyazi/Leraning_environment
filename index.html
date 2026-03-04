@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Rizwan Ali · Complete Teaching Portfolio · IT & AI Mastery</title>
+    <title>Rizwan Ali · Master Algorithm · Design & Development 2026</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -23,6 +23,8 @@
             --light: #f8f9fa;
             --gray: #6c757d;
             --border: #e9ecef;
+            --algorithm-bg: #ffffff;
+            --step-bg: #f0f4ff;
         }
 
         body {
@@ -38,7 +40,7 @@
             padding: 0 20px;
         }
 
-        /* Header */
+        /* Header (unchanged, fully responsive) */
         header {
             background: white;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -68,7 +70,6 @@
             color: var(--accent);
         }
 
-        /* Hamburger Menu */
         .hamburger {
             display: none;
             cursor: pointer;
@@ -100,7 +101,6 @@
             transform: rotate(-45deg) translate(7px, -6px);
         }
 
-        /* Navigation */
         nav {
             transition: all 0.3s ease;
         }
@@ -123,7 +123,6 @@
             color: var(--primary);
         }
 
-        /* Mobile Navigation */
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
@@ -208,7 +207,7 @@
             color: var(--primary);
         }
 
-        /* Alternate Layout Container */
+        /* Alternate Layout Container (original preserved) */
         .alternate-container {
             display: flex;
             flex-direction: column;
@@ -216,7 +215,6 @@
             margin: 40px 0;
         }
 
-        /* Alternate Row */
         .alternate-row {
             display: flex;
             align-items: center;
@@ -232,7 +230,6 @@
             transform: translateY(-5px);
         }
 
-        /* Mobile Stack for Alternate Rows */
         @media (max-width: 900px) {
             .alternate-row {
                 flex-direction: column !important;
@@ -244,7 +241,6 @@
             }
         }
 
-        /* Content Side */
         .content-side {
             flex: 1;
             padding: 15px;
@@ -266,12 +262,6 @@
         .content-side h2 {
             font-size: clamp(1.4rem, 3vw, 2rem);
             margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        .content-side h2 i {
-            color: var(--primary);
-            margin-right: 8px;
         }
 
         .content-side p {
@@ -297,10 +287,6 @@
             color: var(--primary);
             font-size: 1.1rem;
             margin-top: 2px;
-        }
-
-        .teaching-points strong {
-            color: var(--dark);
         }
 
         .btn {
@@ -340,7 +326,6 @@
             font-size: 0.85rem;
         }
 
-        /* Image Side */
         .image-side {
             flex: 1;
             position: relative;
@@ -381,7 +366,6 @@
             opacity: 1;
         }
 
-        /* Alternate classes */
         .alternate-row:nth-child(even) {
             flex-direction: row-reverse;
             background: linear-gradient(to left, white, #f8f9ff);
@@ -420,7 +404,7 @@
             font-size: 0.9rem;
         }
 
-        /* Resource Grid */
+        /* Resource Grid (original) */
         .resource-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -488,14 +472,7 @@
             margin-left: 5px;
         }
 
-        /* Teacher Essentials Cards */
-        .essentials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
+        /* Essential cards base (reused in teacher essentials) */
         .essential-card {
             background: white;
             border-radius: 20px;
@@ -531,6 +508,237 @@
             font-size: 0.95rem;
         }
 
+        /* ===== ENHANCED TEACHER ESSENTIALS SHOWCASE (fully responsive) ===== */
+        .essentials-showcase {
+            background: white;
+            border-radius: 28px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+
+        .essentials-header {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .essentials-header .text-content {
+            flex: 1.2;
+        }
+
+        .essentials-header .text-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .essentials-header .text-content h3 span {
+            color: var(--primary);
+        }
+
+        .essentials-header .text-content p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .essentials-header .image-content {
+            flex: 0.9;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .essentials-header .image-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .essentials-header .image-content:hover img {
+            transform: scale(1.05);
+        }
+
+        .essentials-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .essentials-cards .essential-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s;
+        }
+
+        .essentials-cards .essential-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(67, 97, 238, 0.1);
+        }
+
+        .deepseek-note {
+            background: #ede9fe;
+            border-left: 6px solid var(--secondary);
+            padding: 24px 32px;
+            border-radius: 40px;
+            margin: 40px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .deepseek-note i {
+            color: var(--secondary);
+            margin-right: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .essentials-header {
+                flex-direction: column;
+            }
+
+            .essentials-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== NEW SECTION: MASTER ALGORITHM FOR DESIGN & DEVELOPMENT (responsive) ===== */
+        .master-algorithm {
+            background: linear-gradient(145deg, #ffffff, #f2f5ff);
+            border-radius: 50px;
+            padding: 50px 40px;
+            margin: 60px 0;
+            border: 2px dashed var(--primary);
+            box-shadow: 0 25px 40px -20px rgba(0, 0, 0, 0.2);
+        }
+
+        .algorithm-title {
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+        }
+
+        .algorithm-title span {
+            background: linear-gradient(145deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .algorithm-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .step {
+            background: var(--step-bg);
+            border-radius: 30px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid white;
+            transition: 0.2s;
+        }
+
+        .step:hover {
+            transform: scale(1.02);
+            background: white;
+            box-shadow: 0 10px 25px rgba(67, 97, 238, 0.15);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step h4 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .algorithm-resources {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            background: white;
+            border-radius: 60px;
+            padding: 30px 30px;
+            margin-top: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .algo-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--light);
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: 0.2s;
+            font-size: 1.1rem;
+        }
+
+        .algo-link i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .algo-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .algo-link:hover i {
+            color: white;
+        }
+
+        .official-tag {
+            background: #059669;
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 10px;
+            border-radius: 40px;
+            margin-left: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .master-algorithm {
+                padding: 30px 20px;
+            }
+
+            .algorithm-resources {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .algo-link {
+                justify-content: center;
+            }
+        }
+
         /* Testimonials */
         .testimonials {
             display: grid;
@@ -561,11 +769,6 @@
         .testimonial-author {
             font-weight: 600;
             color: var(--dark);
-        }
-
-        .testimonial-role {
-            font-size: 0.85rem;
-            color: var(--gray);
         }
 
         .stars {
@@ -620,7 +823,6 @@
             font-size: 0.9rem;
         }
 
-        /* Mobile Responsive Fixes */
         @media (max-width: 480px) {
             .hero {
                 padding: 40px 15px;
@@ -659,14 +861,9 @@
         <div class="container">
             <div class="header-content">
                 <a href="#" class="logo">Rizwan<span>Teach</span></a>
-
-                <!-- Hamburger Toggle Button -->
                 <button class="hamburger" id="hamburgerBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
-
                 <nav id="mainNav">
                     <ul>
                         <li><a href="#home" class="nav-link">Home</a></li>
@@ -687,14 +884,13 @@
             </div>
             <h1>Complete IT & AI Teaching Portfolio</h1>
             <p>HTML · CSS · JavaScript · Python · Flask · Django · FastAPI · BeautifulSoup · Selenium · Automation ·
-                Machine Learning · AI · Teacher Essentials</p>
+                Machine Learning · AI · Teacher Essentials · Master Algorithm</p>
         </div>
     </section>
 
     <div class="container">
-        <!-- Teaching Approach Section -->
+        <!-- Teaching Approach Section (original, unchanged) -->
         <h2 class="section-title" id="teaching">My <span>Teaching Approach</span></h2>
-
         <div class="alternate-container">
             <!-- Row 1: Teaching Philosophy -->
             <div class="alternate-row">
@@ -702,8 +898,7 @@
                     <div class="image-container">
                         <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
                             alt="Teaching">
-                        <div class="image-caption">
-                            <i class="fas fa-chalkboard-teacher"></i> Student-centered learning
+                        <div class="image-caption"><i class="fas fa-chalkboard-teacher"></i> Student-centered learning
                         </div>
                     </div>
                 </div>
@@ -712,38 +907,24 @@
                     <h2><i class="fas fa-chalkboard"></i> Student-Centered Learning</h2>
                     <p>I believe in putting students at the center of the learning experience. My teaching approach
                         focuses on understanding each student's unique needs, learning style, and goals.</p>
-
                     <ul class="teaching-points">
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>10,000+ students</strong> taught across 50+ countries</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>500+ blogs</strong> written for deep understanding</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>30 YouTube videos</strong> with 100K+ views</span>
-                        </li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>10,000+ students</strong> taught across 50+
+                                countries</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>500+ blogs</strong> written for deep
+                                understanding</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>30 YouTube videos</strong> with 100K+
+                                views</span></li>
                     </ul>
-
-                    <div>
-                        <a href="#" class="btn">Learn More</a>
-                        <a href="#" class="btn btn-outline">Watch Video</a>
-                    </div>
+                    <div><a href="#" class="btn">Learn More</a><a href="#" class="btn btn-outline">Watch Video</a></div>
                 </div>
             </div>
-
             <!-- Row 2: Python Mastery -->
             <div class="alternate-row">
                 <div class="image-side">
                     <div class="image-container">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
                             alt="Python Course">
-                        <div class="image-caption">
-                            <i class="fab fa-python"></i> Python programming
-                        </div>
+                        <div class="image-caption"><i class="fab fa-python"></i> Python programming</div>
                     </div>
                 </div>
                 <div class="content-side">
@@ -751,39 +932,26 @@
                     <h2><i class="fab fa-python"></i> Python Programming Mastery</h2>
                     <p>From beginners to advanced developers, this comprehensive Python course covers everything you
                         need to become proficient.</p>
-
                     <ul class="teaching-points">
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Official Python 3.13 docs</strong> - Complete reference</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>327 GitHub projects</strong> for hands-on practice</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>5 MIT Scratch projects</strong> for beginners</span>
-                        </li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Official Python 3.13 docs</strong> -
+                                Complete reference</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>327 GitHub projects</strong> for hands-on
+                                practice</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>5 MIT Scratch projects</strong> for
+                                beginners</span></li>
                     </ul>
-
-                    <div>
-                        <a href="https://docs.python.org/3/" class="btn btn-small" target="_blank">Python Docs</a>
-                        <a href="https://github.com/rizwan-ai" class="btn btn-small btn-outline"
-                            target="_blank">GitHub</a>
-                    </div>
+                    <div><a href="https://docs.python.org/3/" class="btn btn-small" target="_blank">Python Docs</a><a
+                            href="https://github.com/rizwan-ai" class="btn btn-small btn-outline"
+                            target="_blank">GitHub</a></div>
                 </div>
             </div>
-
             <!-- Row 3: Web Development Frameworks -->
             <div class="alternate-row">
                 <div class="image-side">
                     <div class="image-container">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
                             alt="Web Development">
-                        <div class="image-caption">
-                            <i class="fas fa-code"></i> Web frameworks
-                        </div>
+                        <div class="image-caption"><i class="fas fa-code"></i> Web frameworks</div>
                     </div>
                 </div>
                 <div class="content-side">
@@ -791,41 +959,27 @@
                     <h2><i class="fas fa-globe"></i> Web Development Frameworks</h2>
                     <p>Master modern web development with Python frameworks from lightweight Flask to full-featured
                         Django.</p>
-
                     <ul class="teaching-points">
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Flask</strong> - flask.palletsprojects.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Django</strong> - docs.djangoproject.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>FastAPI</strong> - fastapi.tiangolo.com</span>
-                        </li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Flask</strong> -
+                                flask.palletsprojects.com</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Django</strong> -
+                                docs.djangoproject.com</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>FastAPI</strong> -
+                                fastapi.tiangolo.com</span></li>
                     </ul>
-
-                    <div>
-                        <a href="https://flask.palletsprojects.com/" class="btn btn-small" target="_blank">Flask</a>
-                        <a href="https://docs.djangoproject.com/" class="btn btn-small btn-outline"
-                            target="_blank">Django</a>
-                        <a href="https://fastapi.tiangolo.com/" class="btn btn-small btn-outline"
-                            target="_blank">FastAPI</a>
-                    </div>
+                    <div><a href="https://flask.palletsprojects.com/" class="btn btn-small" target="_blank">Flask</a><a
+                            href="https://docs.djangoproject.com/" class="btn btn-small btn-outline"
+                            target="_blank">Django</a><a href="https://fastapi.tiangolo.com/"
+                            class="btn btn-small btn-outline" target="_blank">FastAPI</a></div>
                 </div>
             </div>
-
             <!-- Row 4: Automation & Scraping -->
             <div class="alternate-row">
                 <div class="image-side">
                     <div class="image-container">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
                             alt="Automation">
-                        <div class="image-caption">
-                            <i class="fas fa-robot"></i> Web scraping
-                        </div>
+                        <div class="image-caption"><i class="fas fa-robot"></i> Web scraping</div>
                     </div>
                 </div>
                 <div class="content-side">
@@ -833,63 +987,77 @@
                     <h2><i class="fas fa-robot"></i> Web Scraping & Automation</h2>
                     <p>Learn to extract data from websites and automate browser interactions with powerful Python
                         libraries.</p>
-
                     <ul class="teaching-points">
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>BeautifulSoup</strong> - www.crummy.com</span>
+                        <li><i class="fas fa-check-circle"></i><span><strong>BeautifulSoup</strong> -
+                                www.crummy.com</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Selenium</strong> - www.selenium.dev</span>
                         </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Selenium</strong> - www.selenium.dev</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <span><strong>Scrapy</strong> - scrapy.org</span>
-                        </li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Scrapy</strong> - scrapy.org</span></li>
                     </ul>
-
-                    <div>
-                        <a href="https://www.crummy.com/software/BeautifulSoup/" class="btn btn-small"
-                            target="_blank">BeautifulSoup</a>
-                        <a href="https://www.selenium.dev/" class="btn btn-small btn-outline"
-                            target="_blank">Selenium</a>
-                    </div>
+                    <div><a href="https://www.crummy.com/software/BeautifulSoup/" class="btn btn-small"
+                            target="_blank">BeautifulSoup</a><a href="https://www.selenium.dev/"
+                            class="btn btn-small btn-outline" target="_blank">Selenium</a></div>
                 </div>
             </div>
         </div>
 
-        <!-- Teacher Essentials Section -->
-        <h2 class="section-title"><span>Teacher</span> Essentials</h2>
-
-        <div class="essentials-grid">
-            <div class="essential-card">
-                <div class="essential-icon"><i class="fab fa-wikipedia-w"></i></div>
-                <h3>EdTech Wikipedia</h3>
-                <p>Overview of educational technology tools, pedagogical theories, and current research in digital
-                    learning.</p>
-                <a href="https://en.wikipedia.org/wiki/Educational_technology" class="essential-link"
-                    target="_blank">Read Article →</a>
+        <!-- ===== ENHANCED TEACHER ESSENTIALS (with official links) ===== -->
+        <div class="essentials-showcase">
+            <div class="essentials-header">
+                <div class="text-content">
+                    <h3><span>Teacher</span> Essentials · Official & Trusted</h3>
+                    <p><strong>Essential toolkit for every modern educator:</strong> stay updated with the intersection
+                        of education and technology.
+                        <strong>EdTech Wikipedia</strong> offers a broad overview of pedagogical theories and digital
+                        tools.
+                        <strong>EdSurge</strong> delivers independent news, product reviews, and research on how
+                        technology shapes learning.
+                        <strong>ISTE</strong> (International Society for Technology in Education) sets the global
+                        standards for educator certification
+                        and provides a community of forward-thinking teachers. These three pillars are the foundation
+                        for any teacher who wants to integrate AI, coding, and design into their classroom.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+                        alt="Teacher essentials">
+                </div>
             </div>
 
-            <div class="essential-card">
-                <div class="essential-icon"><i class="fas fa-newspaper"></i></div>
-                <h3>EdSurge</h3>
-                <p>Independent news and resources covering the intersection of education and technology with daily
-                    updates.</p>
-                <a href="https://www.edsurge.com" class="essential-link" target="_blank">Visit EdSurge →</a>
+            <div class="essentials-cards">
+                <div class="essential-card">
+                    <div class="essential-icon"><i class="fab fa-wikipedia-w"></i></div>
+                    <h3>EdTech Wikipedia</h3>
+                    <p>Overview of educational technology tools, pedagogical theories, and current research in digital
+                        learning.</p>
+                    <a href="https://en.wikipedia.org/wiki/Educational_technology" class="essential-link"
+                        target="_blank">Read Article →</a>
+                </div>
+                <div class="essential-card">
+                    <div class="essential-icon"><i class="fas fa-newspaper"></i></div>
+                    <h3>EdSurge</h3>
+                    <p>Independent news and resources covering the intersection of education and technology with daily
+                        updates.</p>
+                    <a href="https://www.edsurge.com" class="essential-link" target="_blank">Visit EdSurge →</a>
+                </div>
+                <div class="essential-card">
+                    <div class="essential-icon"><i class="fas fa-globe"></i></div>
+                    <h3>ISTE</h3>
+                    <p>International Society for Technology in Education - global standards and certification for
+                        educators.</p>
+                    <a href="https://www.iste.org" class="essential-link" target="_blank">Explore ISTE →</a>
+                </div>
             </div>
 
-            <div class="essential-card">
-                <div class="essential-icon"><i class="fas fa-globe"></i></div>
-                <h3>ISTE</h3>
-                <p>International Society for Technology in Education - global standards and certification for educators.
-                </p>
-                <a href="https://www.iste.org" class="essential-link" target="_blank">Explore ISTE →</a>
+            <div class="deepseek-note">
+                <i class="fas fa-robot"></i> <strong>Rizwan AI recommendation:</strong> "Combine EdTech Wikipedia for
+                foundational knowledge,
+                EdSurge for daily inspiration, and ISTE for certification and networking. These resources are essential
+                for any teacher embracing AI in 2026."
             </div>
         </div>
 
-        <!-- Stats Section -->
+        <!-- Stats Section (original) -->
         <div class="stats-section">
             <div class="stats-grid">
                 <div class="stat-item">
@@ -919,189 +1087,181 @@
             </div>
         </div>
 
-        <!-- Official Resources Grid -->
-        <h2 class="section-title" id="resources"><span>Official</span> Documentation</h2>
+        <!-- ===== NEW MASTER ALGORITHM FOR DESIGN & DEVELOPMENT ===== -->
+        <div class="master-algorithm">
+            <h2 class="algorithm-title"><span>⚙️ Master Algorithm</span> for Design & Development</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 1.2rem;">Follow this 5‑step
+                recursive learning path, powered by official docs and real‑world building.</p>
 
-        <div class="resource-grid">
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fab fa-python"></i></div>
-                <h3>Python</h3>
-                <div class="resource-links">
-                    <a href="https://docs.python.org/3/" class="resource-link" target="_blank">Python 3.13 Docs <span
-                            class="official-badge">Official</span></a>
-                    <a href="https://docs.python.org/3/tutorial/" class="resource-link" target="_blank">Python
-                        Tutorial</a>
+            <div class="algorithm-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Design → Code</h4>
+                    <p>Start with Canva / Figma, then translate to semantic HTML + vanilla CSS/JS. Use
+                        <strong>MDN</strong> as your reference.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Python Core</h4>
+                    <p>Master Python 3.13 with <strong>official docs</strong> and build CLI tools, then move to
+                        automation (BeautifulSoup, Selenium).</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>API & Backend</h4>
+                    <p>Choose Flask (lightweight) or Django (full‑stack) or FastAPI (async). Study the official
+                        documentation for each.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Autonomous AI</h4>
+                    <p>Integrate ML (scikit‑learn, PyTorch) and build agents that scrape, decide, and serve predictions
+                        via FastAPI.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h4>Teacher's Edge</h4>
+                    <p>Use EdTech Wikipedia, EdSurge, ISTE to stay current. Teach others — the final step of mastery.
+                    </p>
                 </div>
             </div>
 
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fab fa-html5"></i></div>
-                <h3>HTML/CSS/JS</h3>
-                <div class="resource-links">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="resource-link"
-                        target="_blank">MDN HTML <span class="official-badge">Official</span></a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="resource-link" target="_blank">MDN
-                        CSS</a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="resource-link"
-                        target="_blank">MDN JS</a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fas fa-flask"></i></div>
-                <h3>Flask</h3>
-                <div class="resource-links">
-                    <a href="https://flask.palletsprojects.com/" class="resource-link" target="_blank">Flask Docs <span
-                            class="official-badge">Official</span></a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fab fa-django"></i></div>
-                <h3>Django</h3>
-                <div class="resource-links">
-                    <a href="https://docs.djangoproject.com/" class="resource-link" target="_blank">Django Docs <span
-                            class="official-badge">Official</span></a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fas fa-bolt"></i></div>
-                <h3>FastAPI</h3>
-                <div class="resource-links">
-                    <a href="https://fastapi.tiangolo.com/" class="resource-link" target="_blank">FastAPI Docs <span
-                            class="official-badge">Official</span></a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fas fa-robot"></i></div>
-                <h3>Selenium</h3>
-                <div class="resource-links">
-                    <a href="https://www.selenium.dev/documentation/" class="resource-link" target="_blank">Selenium
-                        Docs <span class="official-badge">Official</span></a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fas fa-soup"></i></div>
-                <h3>BeautifulSoup</h3>
-                <div class="resource-links">
-                    <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" class="resource-link"
-                        target="_blank">BeautifulSoup <span class="official-badge">Official</span></a>
-                </div>
-            </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fas fa-brain"></i></div>
-                <h3>Machine Learning</h3>
-                <div class="resource-links">
-                    <a href="https://scikit-learn.org/stable/" class="resource-link" target="_blank">scikit-learn <span
-                            class="official-badge">Official</span></a>
-                    <a href="https://www.tensorflow.org/" class="resource-link" target="_blank">TensorFlow</a>
-                </div>
+            <div class="algorithm-resources">
+                <a href="https://developer.mozilla.org/" class="algo-link" target="_blank"><i class="fab fa-js"></i> MDN
+                    <span class="official-tag">official</span></a>
+                <a href="https://docs.python.org/3/" class="algo-link" target="_blank"><i class="fab fa-python"></i>
+                    Python 3.13 <span class="official-tag">official</span></a>
+                <a href="https://fastapi.tiangolo.com/" class="algo-link" target="_blank"><i class="fas fa-bolt"></i>
+                    FastAPI <span class="official-tag">official</span></a>
+                <a href="https://flask.palletsprojects.com/" class="algo-link" target="_blank"><i
+                        class="fas fa-flask"></i> Flask <span class="official-tag"></span></a>
+                <a href="https://docs.djangoproject.com/" class="algo-link" target="_blank"><i
+                        class="fab fa-django"></i> Django <span class="official-tag">official</span></a>
+                <a href="https://www.selenium.dev/" class="algo-link" target="_blank"><i class="fas fa-robot"></i>
+                    Selenium <span class="official-tag"></span></a>
             </div>
         </div>
 
-        <!-- Latest Blogs Section -->
-        <h2 class="section-title" id="blogs"><span>Latest</span> AI Blogs 2026</h2>
-
+        <!-- Official Resources Grid (original) -->
+        <h2 class="section-title" id="resources"><span>Official</span> Documentation</h2>
         <div class="resource-grid">
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fas fa-blog"></i></div>
+            <div class="resource-card"><i class="fab fa-python resource-icon"></i>
+                <h3>Python</h3>
+                <div class="resource-links"><a href="https://docs.python.org/3/" class="resource-link"
+                        target="_blank">Python 3.13 Docs <span class="official-badge">Official</span></a><a
+                        href="https://docs.python.org/3/tutorial/" class="resource-link" target="_blank">Python
+                        Tutorial</a></div>
+            </div>
+            <div class="resource-card"><i class="fab fa-html5 resource-icon"></i>
+                <h3>HTML/CSS/JS</h3>
+                <div class="resource-links"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                        class="resource-link" target="_blank">MDN HTML <span
+                            class="official-badge">Official</span></a><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="resource-link"
+                        target="_blank">MDN CSS</a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                        class="resource-link" target="_blank">MDN JS</a></div>
+            </div>
+            <div class="resource-card"><i class="fas fa-flask resource-icon"></i>
+                <h3>Flask</h3>
+                <div class="resource-links"><a href="https://flask.palletsprojects.com/" class="resource-link"
+                        target="_blank">Flask Docs <span class="official-badge">Official</span></a></div>
+            </div>
+            <div class="resource-card"><i class="fab fa-django resource-icon"></i>
+                <h3>Django</h3>
+                <div class="resource-links"><a href="https://docs.djangoproject.com/" class="resource-link"
+                        target="_blank">Django Docs <span class="official-badge">Official</span></a></div>
+            </div>
+            <div class="resource-card"><i class="fas fa-bolt resource-icon"></i>
+                <h3>FastAPI</h3>
+                <div class="resource-links"><a href="https://fastapi.tiangolo.com/" class="resource-link"
+                        target="_blank">FastAPI Docs <span class="official-badge">Official</span></a></div>
+            </div>
+            <div class="resource-card"><i class="fas fa-robot resource-icon"></i>
+                <h3>Selenium</h3>
+                <div class="resource-links"><a href="https://www.selenium.dev/documentation/" class="resource-link"
+                        target="_blank">Selenium Docs <span class="official-badge">Official</span></a></div>
+            </div>
+            <div class="resource-card"><i class="fas fa-soup resource-icon"></i>
+                <h3>BeautifulSoup</h3>
+                <div class="resource-links"><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"
+                        class="resource-link" target="_blank">BeautifulSoup <span
+                            class="official-badge">Official</span></a></div>
+            </div>
+            <div class="resource-card"><i class="fas fa-brain resource-icon"></i>
+                <h3>Machine Learning</h3>
+                <div class="resource-links"><a href="https://scikit-learn.org/stable/" class="resource-link"
+                        target="_blank">scikit-learn <span class="official-badge">Official</span></a><a
+                        href="https://www.tensorflow.org/" class="resource-link" target="_blank">TensorFlow</a></div>
+            </div>
+        </div>
+
+        <!-- Latest Blogs Section (original) -->
+        <h2 class="section-title" id="blogs"><span>Latest</span> AI Blogs 2026</h2>
+        <div class="resource-grid">
+            <div class="resource-card"><i class="fas fa-blog resource-icon"></i>
                 <h3>Claude Code Power Tips</h3>
                 <p>Use Claude Code to speed up data science with Python.</p>
-                <div class="resource-links">
-                    <a href="https://www.kdnuggets.com/" class="resource-link" target="_blank">Read on KDnuggets →</a>
-                </div>
+                <div class="resource-links"><a href="https://www.kdnuggets.com/" class="resource-link"
+                        target="_blank">Read on KDnuggets →</a></div>
             </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fas fa-blog"></i></div>
+            <div class="resource-card"><i class="fas fa-blog resource-icon"></i>
                 <h3>AI Engineer Roadmap 2026</h3>
                 <p>Step-by-step roadmap for AI engineering career.</p>
-                <div class="resource-links">
-                    <a href="https://www.kdnuggets.com/" class="resource-link" target="_blank">Read on KDnuggets →</a>
-                </div>
+                <div class="resource-links"><a href="https://www.kdnuggets.com/" class="resource-link"
+                        target="_blank">Read on KDnuggets →</a></div>
             </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fas fa-blog"></i></div>
+            <div class="resource-card"><i class="fas fa-blog resource-icon"></i>
                 <h3>Python Docs Guide</h3>
                 <p>How to use official Python documentation.</p>
-                <div class="resource-links">
-                    <a href="https://www.guvi.in/blog/how-to-use-the-official-python-documentation/"
-                        class="resource-link" target="_blank">Read on GUVI →</a>
-                </div>
+                <div class="resource-links"><a
+                        href="https://www.guvi.in/blog/how-to-use-the-official-python-documentation/"
+                        class="resource-link" target="_blank">Read on GUVI →</a></div>
             </div>
         </div>
 
-        <!-- Wikipedia Resources -->
+        <!-- Wikipedia Resources (original) -->
         <h2 class="section-title"><span>Wikipedia</span> Knowledge</h2>
-
         <div class="resource-grid">
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fab fa-wikipedia-w"></i></div>
+            <div class="resource-card"><i class="fab fa-wikipedia-w resource-icon"></i>
                 <h3>Artificial Intelligence</h3>
                 <p>Complete overview of AI history and applications.</p>
-                <div class="resource-links">
-                    <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" class="resource-link"
-                        target="_blank">Read Article →</a>
-                </div>
+                <div class="resource-links"><a href="https://en.wikipedia.org/wiki/Artificial_intelligence"
+                        class="resource-link" target="_blank">Read Article →</a></div>
             </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fab fa-wikipedia-w"></i></div>
+            <div class="resource-card"><i class="fab fa-wikipedia-w resource-icon"></i>
                 <h3>Machine Learning</h3>
                 <p>Study of algorithms and statistical models.</p>
-                <div class="resource-links">
-                    <a href="https://en.wikipedia.org/wiki/Machine_learning" class="resource-link" target="_blank">Read
-                        Article →</a>
-                </div>
+                <div class="resource-links"><a href="https://en.wikipedia.org/wiki/Machine_learning"
+                        class="resource-link" target="_blank">Read Article →</a></div>
             </div>
-
-            <div class="resource-card">
-                <div class="resource-icon"><i class="fab fa-wikipedia-w"></i></div>
+            <div class="resource-card"><i class="fab fa-wikipedia-w resource-icon"></i>
                 <h3>Deep Learning</h3>
                 <p>Neural networks with multiple layers.</p>
-                <div class="resource-links">
-                    <a href="https://en.wikipedia.org/wiki/Deep_learning" class="resource-link" target="_blank">Read
-                        Article →</a>
-                </div>
+                <div class="resource-links"><a href="https://en.wikipedia.org/wiki/Deep_learning" class="resource-link"
+                        target="_blank">Read Article →</a></div>
             </div>
         </div>
 
-        <!-- Testimonials -->
+        <!-- Testimonials (original) -->
         <h2 class="section-title">What <span>Students Say</span></h2>
-
         <div class="testimonials">
             <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+                <div class="stars">★★★★★</div>
                 <p class="testimonial-text">"Rizwan's teaching style makes complex concepts easy to understand. I went
                     from beginner to building my own applications!"</p>
                 <p class="testimonial-author">Sarah Johnson</p>
                 <p class="testimonial-role">Data Analyst</p>
             </div>
-
             <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+                <div class="stars">★★★★★</div>
                 <p class="testimonial-text">"The web development bootcamp changed my career. Practical projects with
                     excellent feedback."</p>
                 <p class="testimonial-author">Michael Chen</p>
                 <p class="testimonial-role">Frontend Developer</p>
             </div>
-
             <div class="testimonial-card">
-                <div class="stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                        class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+                <div class="stars">★★★★★</div>
                 <p class="testimonial-text">"Comprehensive data science course with hands-on projects. Best investment
                     in my education!"</p>
                 <p class="testimonial-author">Priya Patel</p>
@@ -1109,9 +1269,10 @@
             </div>
         </div>
 
-        <!-- Teacher Signature -->
+        <!-- Teacher Signature (original) -->
         <div style="text-align: center; margin: 40px 0; font-size: 1.1rem; color: var(--primary);">
-            <i class="fas fa-quote-left"></i> Curated with ❤️ for my students by Rizwan Ali · Complete IT Resource Hub
+            <i class="fas fa-quote-left"></i> Curated with ❤️ for my students by Rizwan Ali · Complete IT Resource Hub ·
+            Master Algorithm
             <i class="fas fa-quote-right"></i>
         </div>
     </div>
@@ -1123,7 +1284,6 @@
                     <h3>Rizwan Teach</h3>
                     <p>Complete IT & AI teaching portfolio with official documentation and resources.</p>
                 </div>
-
                 <div class="footer-widget">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -1132,7 +1292,6 @@
                         <li><a href="#resources">Resources</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-widget">
                     <h3>Official Docs</h3>
                     <ul class="footer-links">
@@ -1141,7 +1300,6 @@
                         <li><a href="https://flask.palletsprojects.com/" target="_blank">Flask</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-widget">
                     <h3>Connect</h3>
                     <ul class="footer-links">
@@ -1150,45 +1308,34 @@
                     </ul>
                 </div>
             </div>
-
             <div class="copyright">
                 <p>© 2026 Rizwan Ali · 10K+ students · 500+ blogs · 327 GitHub · 112 Canva · 30 YouTube · 5 Scratch</p>
-                <p>Teacher Essentials: EdTech Wikipedia · EdSurge · ISTE</p>
+                <p>Teacher Essentials: EdTech Wikipedia · EdSurge · ISTE · Master Algorithm for Design & Dev</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mainNav = document.getElementById('mainNav');
         const navLinks = document.querySelectorAll('.nav-link');
-
         hamburgerBtn.addEventListener('click', () => {
             hamburgerBtn.classList.toggle('active');
             mainNav.classList.toggle('active');
         });
-
-        // Close menu when clicking a link
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 hamburgerBtn.classList.remove('active');
                 mainNav.classList.remove('active');
             });
         });
-
-        // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId !== '#') {
                     const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
+                    if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
